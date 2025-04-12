@@ -1,0 +1,21 @@
+package basicQuestion;
+
+public class PrintNumber 
+{
+	static int i =0;
+	public static void PrintNumber1(int n)
+	{
+		if(i <= n)
+		{
+			System.out.print(i+" ");
+			i++;
+			PrintNumber1(n);
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

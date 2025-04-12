@@ -1,0 +1,48 @@
+package basicQuestion;
+
+import java.util.Scanner;
+
+public class PrimeNumber 
+{
+	
+	public static void PrintPrime(int n)
+	{
+		int count = 0;
+		int num =2;
+		while(count < n)
+		{
+			if(isPrime(num))
+			{
+				System.out.println(num +"--");
+				count++;
+			}
+			num++;
+		}
+	}
+
+	public static boolean isPrime(int n)
+	{
+		if(n < 2)
+		{
+			return false;
+		}
+		
+		for(int i=2;i*i<=n;i++)
+		{
+			if(n % i == 0)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static void main(String[] args)
+	{
+		    Scanner sc = new Scanner(System.in);
+	        System.out.print("Enter the Number :");
+	        int n = sc.nextInt();
+	        PrimeNumber.PrintPrime(n);
+	}
+
+}

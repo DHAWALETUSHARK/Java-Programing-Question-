@@ -1,0 +1,42 @@
+package searching;
+
+public class BinarySearch
+{
+
+	public static boolean BinarySearching(int arr[],int key)
+	{
+		int si =0 ,ei =arr.length-1;
+		
+		while(si <= ei)
+		{
+			int mid = si +(ei -si)/2;
+			if(arr[mid] == key)
+			{
+				return true;
+			}
+			
+			if(arr[mid] > key)
+			{
+				ei = mid -1;
+			}
+			else {
+				si = mid +1;
+			}
+		}
+		
+		return false;
+	}
+	
+	public static void main(String[] args)
+	{
+		int arr[] = {2,3,4,5,6,7,8,9,10};
+		if(BinarySearch.BinarySearching(arr, 11))
+		{
+			System.out.println("Number is Found");
+		}
+		else {
+			System.out.println("Number is Not Found");
+		}
+	}
+
+}
